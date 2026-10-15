@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pesMetadata>
+
+    <releaseMetadata>
+        <pesName>Smooth LED Brightness Control Using PWM - Multiple LEDs Use Case</pesName>
+        <version>1.0.0</version>
+        <releaseDate>2026-07-15</releaseDate>
+        <releaseType>Reference Implementation</releaseType>
+        <metadataSchemaVersion>1.0</metadataSchemaVersion>
+    </releaseMetadata>
+
+    <discoveryMetadata>
+
+        <targetProducts>
+            <productFamily>RA</productFamily>
+            <productSeries>RA4</productSeries>
+
+            <supportedDevices>
+                <device>
+                    <family>RA</family>
+                    <series>RA4</series>
+                    <group>RA4E2</group>
+                </device>
+            </supportedDevices>
+        </targetProducts>
+
+        <targetMarkets>
+            <market>Smart Home</market>
+            <market>Industrial Consumer HMI</market>
+            <market>Consumer Electronics</market>
+            <market>Medical Devices</market>
+        </targetMarkets>
+
+        <endApplications>
+            <application>Home Control Hub</application>
+            <application>Smart Switch</application>
+            <application>HVAC User Panel</application>
+            <application>Control Panel</application>
+            <application>Sensor Hub</application>
+            <application>Machine State Indication Panel</application>
+            <application>Smart Speaker</application>
+            <application>Gaming Accessory</application>
+            <application>Personal Electronics</application>
+            <application>Small Appliance</application>
+            <application>Wearable Device</application>
+            <application>Bedside Control</application>
+            <application>Therapy Device</application>
+        </endApplications>
+
+        <functionalTags>
+            <tag>Smooth Lighting</tag>
+            <tag>LED Dimming</tag>
+            <tag>Brightness Control</tag>
+            <tag>PWM</tag>
+            <tag>Multi LED Control</tag>
+            <tag>Fade In</tag>
+            <tag>Fade Out</tag>
+            <tag>Tunable White Lighting</tag>
+            <tag>Warm Cool Mixing</tag>
+            <tag>Perceptual Dimming</tag>
+            <tag>GPT Timer</tag>
+            <tag>DMAC</tag>
+            <tag>ELC</tag>
+            <tag>Lighting Automation</tag>
+        </functionalTags>
+
+        <hardwareInterfaces>
+
+            <requiredPeripherals>
+                <peripheral>GPT PWM</peripheral>
+                <peripheral>GPT Periodic Timer</peripheral>
+                <peripheral>DMAC</peripheral>
+                <peripheral>ELC</peripheral>
+                <peripheral>IOPORT</peripheral>
+            </requiredPeripherals>
+
+            <outputSignals>
+                <signal>PWM Warm LED Output</signal>
+                <signal>PWM Cool LED Output</signal>
+            </outputSignals>
+
+            <connectedDevices>
+                <device>Multiple LED Light Bulb PMOD</device>
+            </connectedDevices>
+
+        </hardwareInterfaces>
+
+    </discoveryMetadata>
+
+    <descriptiveMetadata>
+
+        <anatomicalMetadata>
+
+            <identity>
+                <name>Smooth LED Lighting Control</name>
+                <shortName>RS_SMOOTH_LED_LIGHTING</shortName>
+                <category>Lighting Control</category>
+                <pesType>Product Enabling Software</pesType>
+            </identity>
+
+            <description>
+                <summary>
+                    Hardware-accelerated smooth LED brightness and color-temperature control using GPT PWM outputs, GPT periodic timers, DMAC transfers, and ELC event chaining. Supports smooth transitions between predefined brightness levels while minimizing CPU utilization.
+                </summary>
+            </description>
+
+            <classification>
+                <domain>Lighting</domain>
+                <technology>PWM Control</technology>
+                <subCategory>LED Dimming</subCategory>
+            </classification>
+
+            <supportedBoards>
+                <board>FPB-RA4E2</board>
+            </supportedBoards>
+
+            <dependencies>
+                <dependency>R_GPT</dependency>
+                <dependency>R_DMAC</dependency>
+                <dependency>R_ELC</dependency>
+                <dependency>R_IOPORT</dependency>
+            </dependencies>
+
+            <hardwareRequirements>
+                <requirement>RA4E2 MCU</requirement>
+                <requirement>FPB-RA4E2 Board</requirement>
+                <requirement>Multiple LED Light Bulb PMOD</requirement>
+                <requirement>PWM-Capable GPT Channels</requirement>
+                <requirement>DMAC Channels</requirement>
+            </hardwareRequirements>
+
+			<artifacts>
+				<artifact>src/rs_smooth_led_lighting/rs_smooth_led_lighting.c</artifact>
+				<artifact>src/rs_smooth_led_lighting/rs_smooth_led_lighting.h</artifact>
+				<artifact>src/rs_smooth_led_lighting/config/rs_smooth_led_lighting_data_fpb_ra4e2.c</artifact>
+				<artifact>src/rs_smooth_led_lighting/config/rs_smooth_led_lighting_data_fpb_ra4e2.h</artifact>
+				<artifact>src/demo/rs_smooth_led_lighting_demo.c</artifact>
+				<artifact>Examples/VSCode/executable/Smooth_LED_Lighting_FPB_RA4E2_cmake.hex</artifact>
+				<artifact>Examples/VSCode/Smooth_LED_Lighting_FPB_RA4E2/configuration.xml</artifact>
+			</artifacts>
+
+			<documentation>
+				<document>README.md</document>
+				<document>docs/RS_SMOOTH_LED_LIGHTING.html</document>
+			</documentation>
+
+        </anatomicalMetadata>
+
+        <behavioralMetadata>
+
+            <capabilities>
+                <capability>Smooth brightness transitions between predefined intensity levels</capability>
+                <capability>Hardware-accelerated PWM duty-cycle updates using DMAC</capability>
+                <capability>Warm and cool LED color-temperature mixing</capability>
+                <capability>Multi-channel LED brightness control</capability>
+                <capability>Interruptible dimming transitions</capability>
+                <capability>CLI-controlled lighting operation</capability>
+                <capability>CPU-offloaded dimming control using GPT, DMAC, and ELC</capability>
+            </capabilities>
+
+            <publicInterfaces>
+                <interface>rs_smooth_lighting_IntensitySet()</interface>
+                <interface>rs_smooth_lighting_Open()</interface>
+                <interface>rs_smooth_lighting_Close()</interface>
+                <interface>rs_smooth_lighting_IntensityLevelSet()</interface>
+                <interface>rs_smooth_lighting_CommonConfigGen()</interface>
+                <interface>rs_smooth_lighting_ControlConfigGen()</interface>
+            </publicInterfaces>
+
+            <configuration>
+                <parameter>Brightness Level</parameter>
+                <parameter>Dimming Table</parameter>
+                <parameter>PWM Configuration</parameter>
+                <parameter>Fade Timing Configuration</parameter>
+                <parameter>Warm Cool Mixing Profile</parameter>
+                <parameter>LED Bulb Count</parameter>
+            </configuration>
+
+            <executionModel>
+
+                <initialization>
+                    Generate and validate module configuration, initialize GPT, DMAC, and ELC resources, and prepare dimming tables for runtime operation.
+                </initialization>
+
+				<runtimeBehavior>
+					PWM overflow events drive a fading timer whose overflow triggers DMAC updates of PWM duty-cycle registers from dimming tables, enabling smooth LED transitions with minimal CPU involvement.
+				</runtimeBehavior>
+
+            </executionModel>
+
+			<useCases>
+				<useCase>Smart Home Lighting</useCase>
+				<useCase>Industrial HMI Lighting</useCase>
+				<useCase>Status Indicator Lighting</useCase>
+				<useCase>Machine State Indicators</useCase>
+				<useCase>Decorative Lighting</useCase>
+				<useCase>Tunable White Lighting</useCase>
+				<useCase>Multi-LED Animation</useCase>
+				<useCase>Scene-Based Lighting</useCase>
+			</useCases>
+
+        </behavioralMetadata>
+
+        <performanceMetadata>
+
+            <performanceCharacteristics>
+
+                <customMetric name="brightnessLevels">
+                    OFF, LOW, MID, HIGH, FULL_ON
+                </customMetric>
+
+                <customMetric name="dimmingTableEntries">
+                    401 entries
+                </customMetric>
+
+                <customMetric name="transitionResolution">
+                    100 dimming steps between adjacent brightness levels
+                </customMetric>
+
+                <customMetric name="cpuUtilizationModel">
+                    Hardware accelerated through GPT, DMAC and ELC
+                </customMetric>
+
+            </performanceCharacteristics>
+
+            <resources>
+                <resource>1 GPT periodic timer per control instance</resource>
+                <resource>1 GPT PWM timer per LED bulb</resource>
+                <resource>2 DMAC channels per LED bulb</resource>
+				<resource>2 PWM Outputs per LED Bulb</resource>
+            </resources>
+
+            <validation>
+
+                <validationCase>
+
+                    <validatedBoard>FPB-RA4E2</validatedBoard>
+
+                    <validatedDevice>RA4E2</validatedDevice>
+
+                    <validatedConfiguration>
+                        Light Bulb Demo PMOD using GPT PWM, GPT periodic timer, DMAC, ELC and CLI control interface
+                    </validatedConfiguration>
+
+                    <testResult>
+                        Demonstration application validated on FPB-RA4E2 with brightness transitions between OFF, LOW, MID, HIGH and FULL_ON levels. Additional supported commands include ON, DIMMER, and BRIGHTER.
+                    </testResult>
+
+                </validationCase>
+
+            </validation>
+
+        </performanceMetadata>
+
+    </descriptiveMetadata>
+
+</pesMetadata>

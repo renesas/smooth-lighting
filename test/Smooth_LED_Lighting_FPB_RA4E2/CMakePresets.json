@@ -1,0 +1,52 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 23,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "Debug",
+      "displayName": "Debug",
+      "description": "Debug build using Ninja generator",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/Debug",
+      "toolchainFile":  "${sourceDir}/cmake/llvm.cmake",
+      "cacheVariables": {
+		"CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake/llvm.cmake",
+		"CMAKE_BUILD_TYPE": "Debug"
+      },
+      "environment": {
+        "EXAMPLE_ENVIRONMENT_VARIABLE": "$env{HOME}",
+        "PATH": "$env{HOME}/ninja/bin:$penv{PATH}"
+      }
+    },
+	{
+      "name": "Release",
+      "displayName": "Release",
+      "description": "Release build using Ninja generator",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/Release",
+      "toolchainFile":  "${sourceDir}/cmake/llvm.cmake",
+      "cacheVariables": {
+		"CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake/llvm.cmake",
+		"CMAKE_BUILD_TYPE": "Release"
+      },
+      "environment": {
+        "EXAMPLE_ENVIRONMENT_VARIABLE": "$env{HOME}",
+        "PATH": "$env{HOME}/ninja/bin:$penv{PATH}"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "Debug",
+      "configurePreset": "Debug"
+    },
+	{
+      "name": "Release",
+      "configurePreset": "Release"
+    }
+  ]
+}

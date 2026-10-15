@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>Smooth_LED_Lighting_FPB_RA4E2_cmake</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.renesas.cdt.ddsc.contentgen.ddscBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.cdt.core.cBuilder</name>
+			<triggers>clean,full,incremental,</triggers>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>com.renesas.cdt.ddsc.contentgen.ddscInterlockBundleBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.cdt.core.cnature</nature>
+		<nature>org.eclipse.cdt.core.ccnature</nature>
+		<nature>com.renesas.cdt.ddsc.contentgen.ddscCMakeNature</nature>
+		<nature>com.renesas.cdt.build.cmake.arm.armCmakeNature</nature>
+		<nature>com.renesas.cdt.ddsc.contentgen.ddscNature</nature>
+		<nature>com.renesas.cdt.ra.contentgen.raNature</nature>
+	</natures>
+</projectDescription>

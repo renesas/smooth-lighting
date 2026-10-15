@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Renesas WebUSB J-Link GDB Debugging",
+      "type": "renesas-web-debug",
+      "request": "launch",
+      "target": {
+        "deviceFamily": "RA",
+        "board": "FPB-RA4E2",
+        "device": "R7FA4E2B9",
+        "debuggerType": "WEBUSBJLINKARM"
+      },
+      "projectRoot": "${workspaceFolder}/build/Debug",
+      "images": []
+    }
+  ]
+}

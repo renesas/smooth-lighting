@@ -1,0 +1,44 @@
+stages:
+  - sync
+  - build
+  - test
+sync_rs_smooth_led_lighting:
+  stage: sync
+  image: python:3.11-slim
+  script:
+    - echo "start sync job"
+    - python script/sync_check.py  
+build_renesas_ra:
+  stage: build
+  tags:
+    - RasPiTestBN   # Runner tag
+  script:   
+    - echo "the project directory is - $CI_PROJECT_DIR"
+    - echo "the builb directory is - $CI_BUILDS_DIR"
+    - echo "Change directory to the project directory..."
+    - cd $CI_PROJECT_DIR//test//Smooth_LED_Lighting_FPB_RA4E2
+    - echo "Starting CMake build..."
+    - python pipeline_build.py        
+  # Keep build files:
+  artifacts:
+    expire_in: 3 day
+    paths:
+      - test//Smooth_LED_Lighting_FPB_RA4E2//build//Debug    
+test_fpb_board:
+  stage: test
+  tags:
+    - RasPiTestBN   # Runner tag
+  before_script:
+  # Export rfp path, add junit-xml library, pyserial
+    - export PATH=$PATH:/opt/rfp_v32400
+    - python3 -m venv .venv
+    - source .venv/bin/activate
+    - pip install junit-xml pyserial
+  script:
+    - python script//run_tests.py
+  artifacts:
+    name: "uart-test-results"
+    when: always
+    reports:
+      junit: junit_report.xml  # GitLab pipeline tests tab
+  
