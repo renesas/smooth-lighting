@@ -1,4 +1,4 @@
-# RS Smooth Lighting Control
+# Smooth Lighting Control
 
 ## Table of Contents
 * [1. Introduction](#1-introduction)
