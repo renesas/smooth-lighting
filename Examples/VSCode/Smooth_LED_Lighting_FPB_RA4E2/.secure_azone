@@ -3,22 +3,13 @@
     <rzone name="R7FA4E2B93CFM.rzone"/>
     <partition>
         <peripheral name="PORT0.CM33" group="PORT">
-            <slot name="P000.CM33" secure="true"/>
-            <slot name="P001.CM33" secure="true"/>
-            <slot name="P002.CM33" secure="true"/>
-            <slot name="P003.CM33" secure="true"/>
-            <slot name="P004.CM33" secure="true"/>
             <slot name="P005.CM33" secure="true"/>
             <slot name="P006.CM33" secure="true"/>
             <slot name="P008.CM33" secure="true"/>
-            <slot name="P013.CM33" secure="true"/>
             <slot name="P014.CM33" secure="true"/>
             <slot name="P015.CM33" secure="true"/>
         </peripheral>
         <peripheral name="PORT1.CM33" group="PORT">
-            <slot name="P100.CM33" secure="true"/>
-            <slot name="P101.CM33" secure="true"/>
-            <slot name="P102.CM33" secure="true"/>
             <slot name="P105.CM33" secure="true"/>
             <slot name="P106.CM33" secure="true"/>
             <slot name="P107.CM33" secure="true"/>
@@ -38,7 +29,6 @@
             <slot name="P300.CM33" secure="true"/>
             <slot name="P301.CM33" secure="true"/>
             <slot name="P302.CM33" secure="true"/>
-            <slot name="P304.CM33" secure="true"/>
         </peripheral>
         <peripheral name="PORT4.CM33" group="PORT">
             <slot name="P400.CM33" secure="true"/>

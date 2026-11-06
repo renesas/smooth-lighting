@@ -3,7 +3,7 @@
 
 set(RASC_TARGET_DEVICE R7FA4E2B9)
 set(RASC_TARGET_ARCH cortex-m33)
-set(RASC_PROJECT_NAME Smooth_LED_Lighting_FPB_RA4E2)
+set(RASC_PROJECT_NAME Today)
 SET(RASC_TOOLCHAIN_NAME LLVMARM)
 
 SET(RASC_CMAKE_ASM_FLAGS "-mfloat-abi=hard;--target=arm-none-eabi;-mcpu=cortex-m33;-mfpu=fpv5-sp-d16;-Wunused;-Wuninitialized;-Wall;-Wextra;-Wmissing-declarations;-Wconversion;-Wpointer-arith;-Wshadow;-Waggregate-return;-Wno-parentheses-equality;-Wfloat-equal;-fshort-enums;-fno-unroll-loops;-fmessage-length=0;-fsigned-char;-ffunction-sections;-fdata-sections;-mthumb;-mlittle-endian;-x;assembler-with-cpp;-MP")

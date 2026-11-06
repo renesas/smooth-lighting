@@ -105,20 +105,20 @@ FSP Configuration
     RA4E2 FPB -> g_bsp_pin_cfg
       AVCC0 56 SYSTEM_AVCC0 - - - - - - - - IO "Read only" - 
       AVSS0 57 SYSTEM_AVSS0 - - - - - - - - IO "Read only" - 
-      P000 64 ADC0_AN000 ARDUINO_A0 - - "Analog mode" - - "ADC0: AN000; IRQ: IRQ6-DS" - I - - 
-      P001 63 ADC0_AN001 ARDUINO_A1 - - "Analog mode" - - "ADC0: AN001; IRQ: IRQ7-DS" - I - - 
-      P002 62 ADC0_AN002 ARDUINO_A2 - - "Analog mode" - - "ADC0: AN002; IRQ: IRQ8-DS" - I - - 
-      P003 55 ADC0_AN007 ARDUINO_A4 - - "Analog mode" - - "ADC0: AN007" - I - - 
-      P004 61 ADC0_AN004 ARDUINO_A3 - - "Analog mode" - - "ADC0: AN004; IRQ: IRQ9-DS" - I - - 
+      P000 64 - ARDUINO_A0 - - Disabled - - "ADC0: AN000; IRQ: IRQ6-DS" - None - - 
+      P001 63 - ARDUINO_A1 - - Disabled - - "ADC0: AN001; IRQ: IRQ7-DS" - None - - 
+      P002 62 - ARDUINO_A2 - - Disabled - - "ADC0: AN002; IRQ: IRQ8-DS" - None - - 
+      P003 55 - ARDUINO_A4 - - Disabled - - "ADC0: AN007" - None - - 
+      P004 61 - ARDUINO_A3 - - Disabled - - "ADC0: AN004; IRQ: IRQ9-DS" - None - - 
       P005 60 GPIO PMOD1_RESET - None "Input mode" - - "ADC0: AN005; IRQ: IRQ10-DS" - IO - - 
       P006 51 GPIO ARDUINO_D8 - None "Input mode" - - "ADC0: AN006; IRQ: IRQ11-DS" - IO - - 
       P008 50 GPIO ARDUINO_D7 - None "Input mode" - - "ADC0: AN008; IRQ: IRQ12-DS" - IO - - 
-      P013 54 ADC0_AN011 ARDUINO_A5 - - "Analog mode" - - "ADC0: AN011" - I - - 
+      P013 54 - ARDUINO_A5 - - Disabled - - "ADC0: AN011" - None - - 
       P014 53 GPIO PMOD2_GPIO1 - - "Input mode" - - "ADC0: AN012; DAC120: DA0" - IO - - 
       P015 52 GPIO PMOD2_GPIO2 - None "Input mode" - - "ADC0: AN013; IRQ: IRQ13" - IO - - 
-      P100 48 I3C/IIC_I3C_SCL I3C_SCL_ARDUINO_SCL H None "Peripheral mode" - - "AGT0: AGTIO0; GPT5: GTIOC5B; GPT_POEGA: GTETRGA; I3C/IIC: I3C_SCL; IRQ: IRQ2; SCI0: RXD0; SPI1: MISO1; SSIE: AUDIO_CLK" - IO - - 
-      P101 47 I3C/IIC_I3C_SDA I3C_SDA_ARDUINO_SDA H None "Peripheral mode" - - "AGT0: AGTEE0; GPT5: GTIOC5A; GPT_POEGB: GTETRGB; I3C/IIC: I3C_SDA; IRQ: IRQ1; SCI0: TXD0; SPI1: MOSI1" - IO - - 
-      P102 46 SCI0_SCK0 PMOD2_SCK H - "Peripheral mode" - - "ADC0(Digital): ADTRG0; AGT0: AGTO0; CANFD0: CRX0; GPT_OPS: GTOWLO; SCI0: SCK0; SPI1: RSPCK1; SSIE0: SSIBCK0" - IO - - 
+      P100 48 - I3C_SCL_ARDUINO_SCL - - Disabled - - "AGT0: AGTIO0; GPT5: GTIOC5B; GPT_POEGA: GTETRGA; I3C/IIC: I3C_SCL; IRQ: IRQ2; SCI0: RXD0; SPI1: MISO1; SSIE: AUDIO_CLK" - None - - 
+      P101 47 - I3C_SDA_ARDUINO_SDA - - Disabled - - "AGT0: AGTEE0; GPT5: GTIOC5A; GPT_POEGB: GTETRGB; I3C/IIC: I3C_SDA; IRQ: IRQ1; SCI0: TXD0; SPI1: MOSI1" - None - - 
+      P102 46 - PMOD2_SCK - - Disabled - - "ADC0(Digital): ADTRG0; AGT0: AGTO0; CANFD0: CRX0; GPT_OPS: GTOWLO; SCI0: SCK0; SPI1: RSPCK1; SSIE0: SSIBCK0" - None - - 
       P103 45 - - - - Disabled - - "CANFD0: CTX0; GPT_OPS: GTOWUP; SCI0: CTS_RTS0; SPI1: SSLB0; SSIE0: SSIFS0; SSIE0: SSILRCK0" - None - - 
       P104 44 - - - - Disabled - - "AGT1: AGTIO1; GPT1: GTIOC1B; GPT_POEGB: GTETRGB; IRQ: IRQ1; SPI1: SSLB1" - None - - 
       P105 43 GPIO ARDUINO_D2 - None "Input mode" - - "GPT1: GTIOC1A; GPT_POEGA: GTETRGA; IRQ: IRQ0; SPI1: SSLB2" - IO - - 
@@ -142,7 +142,7 @@ FSP Configuration
       P301 31 GPT4_GTIOC4B ARDUINO_D10 L None "Peripheral mode" - - "AGT0: AGTIO0; GPT4: GTIOC4B; GPT_OPS: GTOULO; IRQ: IRQ6; SCI9: CTS_RTS9; SPI0: SSLA0; SSIE0: SSIRXD0" - IO - - 
       P302 30 GPT4_GTIOC4A - L None "Peripheral mode" - - "GPT4: GTIOC4A; GPT_OPS: GTOUUP; IRQ: IRQ5; RTC: RTCOUT; SCI0: CTS0; SCI9: SCK9; SPI0: RSPCK0; SSIE0: SSITXD0" - IO - - 
       P303 29 - - - - Disabled - - "SCI9: CTS9" - None - - 
-      P304 28 IRQ_IRQ9 SW1 - IRQ9 "IRQ mode" - - "GPT_OPS: GTOWLO; IRQ: IRQ9" - IO - - 
+      P304 28 - SW1 - - Disabled - - "GPT_OPS: GTOWLO; IRQ: IRQ9" - None - - 
       P400 1 GPIO I2C_I3C_SEL_SCL H - "Output mode (Initial High)" - - "AGT1: AGTIO1; I3C/IIC: SCL0; IRQ: IRQ0" - IO - - 
       P401 2 GPIO I2C_I3C_SEL_SDA H - "Output mode (Initial High)" - - "CANFD0: CTX0; GPT_POEGA: GTETRGA; I3C/IIC: SDA0; IRQ: IRQ5-DS" - IO - - 
       P402 3 GPIO PMOD1_IRQ - None "Input mode" - - "AGT0: AGTIO0; AGT1: AGTIO1; CAC: CACREF; CANFD0: CRX0; GPT: GTADSM1; IRQ: IRQ4-DS; RTC: RTCIC0; SSIE: AUDIO_CLK" - IO - - 
@@ -170,20 +170,20 @@ FSP Configuration
     R7FA4E2B93CFM.pincfg -> 
       AVCC0 56 SYSTEM_AVCC0 - - - - - - - - IO "Read only" - 
       AVSS0 57 SYSTEM_AVSS0 - - - - - - - - IO "Read only" - 
-      P000 64 - ARDUINO_A0 - - Disabled - - "ADC0: AN000; IRQ: IRQ6-DS" - I - - 
-      P001 63 - ARDUINO_A1 - - Disabled - - "ADC0: AN001; IRQ: IRQ7-DS" - I - - 
-      P002 62 - ARDUINO_A2 - - Disabled - - "ADC0: AN002; IRQ: IRQ8-DS" - I - - 
-      P003 55 - ARDUINO_A4 - - Disabled - - "ADC0: AN007" - I - - 
-      P004 61 - ARDUINO_A3 - - Disabled - - "ADC0: AN004; IRQ: IRQ9-DS" - I - - 
+      P000 64 - ARDUINO_A0 - - Disabled - - "ADC0: AN000; IRQ: IRQ6-DS" - None - - 
+      P001 63 - ARDUINO_A1 - - Disabled - - "ADC0: AN001; IRQ: IRQ7-DS" - None - - 
+      P002 62 - ARDUINO_A2 - - Disabled - - "ADC0: AN002; IRQ: IRQ8-DS" - None - - 
+      P003 55 - ARDUINO_A4 - - Disabled - - "ADC0: AN007" - None - - 
+      P004 61 - ARDUINO_A3 - - Disabled - - "ADC0: AN004; IRQ: IRQ9-DS" - None - - 
       P005 60 - PMOD1_RESET - None Disabled - - "ADC0: AN005; IRQ: IRQ10-DS" - IO - - 
       P006 51 - ARDUINO_D8 - None Disabled - - "ADC0: AN006; IRQ: IRQ11-DS" - IO - - 
       P008 50 - ARDUINO_D7 - None Disabled - - "ADC0: AN008; IRQ: IRQ12-DS" - IO - - 
-      P013 54 - ARDUINO_A5 - - Disabled - - "ADC0: AN011" - I - - 
+      P013 54 - ARDUINO_A5 - - Disabled - - "ADC0: AN011" - None - - 
       P014 53 - PMOD2_GPIO1 - - Disabled - - "ADC0: AN012; DAC120: DA0" - IO - - 
       P015 52 - PMOD2_GPIO2 - None Disabled - - "ADC0: AN013; IRQ: IRQ13" - IO - - 
-      P100 48 - I3C_SCL_ARDUINO_SCL L None Disabled - - "AGT0: AGTIO0; GPT5: GTIOC5B; GPT_POEGA: GTETRGA; I3C/IIC: I3C_SCL; IRQ: IRQ2; SCI0: RXD0; SPI1: MISO1; SSIE: AUDIO_CLK" - IO - - 
-      P101 47 - I3C_SDA_ARDUINO_SDA L None Disabled - - "AGT0: AGTEE0; GPT5: GTIOC5A; GPT_POEGB: GTETRGB; I3C/IIC: I3C_SDA; IRQ: IRQ1; SCI0: TXD0; SPI1: MOSI1" - IO - - 
-      P102 46 - PMOD2_SCK L - Disabled - - "ADC0(Digital): ADTRG0; AGT0: AGTO0; CANFD0: CRX0; GPT_OPS: GTOWLO; SCI0: SCK0; SPI1: RSPCK1; SSIE0: SSIBCK0" - IO - - 
+      P100 48 - I3C_SCL_ARDUINO_SCL - - Disabled - - "AGT0: AGTIO0; GPT5: GTIOC5B; GPT_POEGA: GTETRGA; I3C/IIC: I3C_SCL; IRQ: IRQ2; SCI0: RXD0; SPI1: MISO1; SSIE: AUDIO_CLK" - None - - 
+      P101 47 - I3C_SDA_ARDUINO_SDA - - Disabled - - "AGT0: AGTEE0; GPT5: GTIOC5A; GPT_POEGB: GTETRGB; I3C/IIC: I3C_SDA; IRQ: IRQ1; SCI0: TXD0; SPI1: MOSI1" - None - - 
+      P102 46 - PMOD2_SCK - - Disabled - - "ADC0(Digital): ADTRG0; AGT0: AGTO0; CANFD0: CRX0; GPT_OPS: GTOWLO; SCI0: SCK0; SPI1: RSPCK1; SSIE0: SSIBCK0" - None - - 
       P103 45 - - - - Disabled - - "CANFD0: CTX0; GPT_OPS: GTOWUP; SCI0: CTS_RTS0; SPI1: SSLB0; SSIE0: SSIFS0; SSIE0: SSILRCK0" - None - - 
       P104 44 - - - - Disabled - - "AGT1: AGTIO1; GPT1: GTIOC1B; GPT_POEGB: GTETRGB; IRQ: IRQ1; SPI1: SSLB1" - None - - 
       P105 43 - ARDUINO_D2 - None Disabled - - "GPT1: GTIOC1A; GPT_POEGA: GTETRGA; IRQ: IRQ0; SPI1: SSLB2" - IO - - 
@@ -207,7 +207,7 @@ FSP Configuration
       P301 31 - ARDUINO_D10 L None Disabled - - "AGT0: AGTIO0; GPT4: GTIOC4B; GPT_OPS: GTOULO; IRQ: IRQ6; SCI9: CTS_RTS9; SPI0: SSLA0; SSIE0: SSIRXD0" - IO - - 
       P302 30 - - L None Disabled - - "GPT4: GTIOC4A; GPT_OPS: GTOUUP; IRQ: IRQ5; RTC: RTCOUT; SCI0: CTS0; SCI9: SCK9; SPI0: RSPCK0; SSIE0: SSITXD0" - IO - - 
       P303 29 - - - - Disabled - - "SCI9: CTS9" - None - - 
-      P304 28 - SW1 - None Disabled - - "GPT_OPS: GTOWLO; IRQ: IRQ9" - IO - - 
+      P304 28 - SW1 - - Disabled - - "GPT_OPS: GTOWLO; IRQ: IRQ9" - None - - 
       P400 1 - I2C_I3C_SEL_SCL L - Disabled - - "AGT1: AGTIO1; I3C/IIC: SCL0; IRQ: IRQ0" - IO - - 
       P401 2 - I2C_I3C_SEL_SDA L - Disabled - - "CANFD0: CTX0; GPT_POEGA: GTETRGA; I3C/IIC: SDA0; IRQ: IRQ5-DS" - IO - - 
       P402 3 - PMOD1_IRQ - None Disabled - - "AGT0: AGTIO0; AGT1: AGTIO1; CAC: CACREF; CANFD0: CRX0; GPT: GTADSM1; IRQ: IRQ4-DS; RTC: RTCIC0; SSIE: AUDIO_CLK" - IO - - 
@@ -236,6 +236,11 @@ FSP Configuration
   User Events
     
   User Event Links
+    
+  Linker Section Mappings
+    *(.bss.*_fsp_nocache): RAM Zeroed (Uncached)
+    *(.bss.g_heap): RAM Uninitialized
+    *(.bss.g_main_stack): RAM Uninitialized
     
   Module "I/O Port (r_ioport)"
     Parameter Checking: Default (BSP)

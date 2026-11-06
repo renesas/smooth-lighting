@@ -1,4 +1,4 @@
-#Tue Aug 11 17:46:46 PDT 2026
+#Thu Nov 05 19:10:39 PST 2026
 com.renesas.cdt.ddsc.content/com.renesas.cdt.ddsc.content.defaultlinkerscript=script/fsp.lld
 com.renesas.cdt.ddsc.contentgen.options/options/suppresswarningspaths=ra/arm
 com.renesas.cdt.ddsc.contentgen.options/options/toolchainversion=21.1.1
@@ -31,3 +31,5 @@ com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#HAL\ Drivers\#\#all\#\#r_sc
 com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#Projects\#\#all\#\#common\#\#\#\#6.5.0/all=
 com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#Projects\#\#all\#\#common\#\#\#\#6.5.0/libraries=
 com.renesas.cdt.ddsc.project.standalone.projectgenerationoptions/isCpp=false
+com.renesas.cdt.ddsc.settingseditor/com.renesas.cdt.ddsc.settingseditor.active_page=PinConfiguration
+com.renesas.cdt.ddsc.threads.configurator/collapse/module.driver.uart_on_sci_uart.439952304=false
